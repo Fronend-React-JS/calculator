@@ -4,7 +4,7 @@ const specialChars = ["%", "*", "/", "-", "+", "="];
 let output = "";
 
 
-const calculator = (btnValue) => {
+const calculate = (btnValue) => {
     if (btnValue === "=" && output !== "") {
 
         output = eval(output.replace("%", "/100"));
@@ -22,5 +22,5 @@ const calculator = (btnValue) => {
 };
 
 buttons.forEach((button) => {
-    button.addEventListener("click" , e => calculator(e.target.dataset))
+    button.addEventListener("click" , e => calculate(e.target.dataset));
 });
